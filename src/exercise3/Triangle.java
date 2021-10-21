@@ -28,7 +28,7 @@ public class Triangle {
         double p = (a + b + c)/2;
         double area = sqrt(p * (p - a) * (p - b) * (p -c ));
         System.out.println("Area: " + area);
-        System.out.println("Triangle:" + res);
+        System.out.println("Triangle: " + res);
 
     }
 }
