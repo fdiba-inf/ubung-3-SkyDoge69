@@ -5,12 +5,13 @@ import java.util.Scanner;
 public class NumberCounter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int a;
-        int positive_numbers = 0, negative_numbers = 0, sum = 0, count = 0;
-        double average;
+        double a;
+        int positive_numbers = 0, negative_numbers = 0,  count = 0;
+
+        double average, sum = 0;
 
         do {
-            a = input.nextInt();
+            a = input.nextDouble();
             if (a > 0) {
                 positive_numbers++;
             } else if ( a < 0 ) {
