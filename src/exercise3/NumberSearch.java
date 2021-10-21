@@ -17,7 +17,10 @@ public class NumberSearch {
                 System.out.print("\n");
                 count = 0;
             }
-            System.out.print(list.get(i) + " ");
+            System.out.print(list.get(i));
+            if (count != 9) {
+                System.out.print(" ");
+            }
             count++;
         }
     }
