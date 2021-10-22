@@ -6,8 +6,14 @@ public class AngleCalculation {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        double wert = input.nextInt();
-        String type = input.next();
+
+        double wert;
+        String type;
+
+        do {
+            wert = input.nextDouble();
+            type = input.next();
+        } while (!type.equals("r") && !type.equals("d"));
         double res;
 
         if (type.equals("d")) {
