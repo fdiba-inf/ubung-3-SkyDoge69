@@ -14,21 +14,24 @@ public class Triangle {
             b = input.nextDouble();
             c = input.nextDouble();
 
-        } while (a <= 0 || b <= 0 || c <= 0);
+            if (a == 0 || b == 0 || c == 0) {
+                System.out.println("Values are not correct!");
+                break;
+            }
 
-
-        if (a == b && a == c && b == c) {
-            res = "equilateral";
-        } else if (a == b || b == c || c == a) {
-            res = "isosceles";
-        } else {
-            res = "scalene";
-        }
-
-        double p = (a + b + c)/2;
-        double area = sqrt(p * (p - a) * (p - b) * (p -c ));
-        System.out.println("Area: " + area);
-        System.out.println("Triangle: " + res);
-
+            double p = (a + b + c)/2;
+            double area = sqrt(p * (p - a) * (p - b) * (p -c ));
+            System.out.println("Area: " + area);
+            if (a == b && a == c && b == c) {
+                res = "equilateral";
+                System.out.println("Triangle: " + res);
+            } else if (a == b || b == c || c == a) {
+                res = "isosceles";
+                System.out.println("Triangle: " + res);
+            } else {
+                res = "scalene";
+                System.out.println("Triangle: " + res);
+            }
+        } while (a > 0 && b > 0 && c > 0);
     }
 }
