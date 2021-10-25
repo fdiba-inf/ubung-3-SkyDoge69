@@ -13,15 +13,19 @@ public class AngleCalculation {
         do {
             wert = input.nextDouble();
             type = input.next();
-        } while (!type.equals("r") && !type.equals("d"));
-        double res;
+            double res;
+            if (type.equals("d")) {
+                res = (wert * Math.PI)/180;
+                System.out.println("Angle: " + res + "r");
+            } else if (type.equals("r")) {
+                res = (wert * 180)/Math.PI;
+                System.out.println("Angle: " + res + "d");
+            } else {
+                break;
+            }
+        } while (true);
 
-        if (type.equals("d")) {
-            res = (wert * Math.PI)/180;
-            System.out.println(res + "r");
-        } else if (type.equals("r")) {
-            res = (wert * 180)/Math.PI;
-            System.out.println(res + "d");
-        }
+
+
     }
 }
